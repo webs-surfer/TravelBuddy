@@ -1,60 +1,80 @@
-# React + TypeScript + Vite
+# 🌍 AI Travel Buddy - React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An **AI-powered personal travel assistant** web application built with **React, TypeScript, and Vite**.  
+The platform provides two experiences:
+- **Visitor Mode** → Public homepage with details about the platform, About Us, Membership, and Contact.  
+- **Member Mode** → Once logged in, users can chat with the AI, view trip dashboards, compare travel options, and access smart travel features.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- 🔑 **Authentication (Login / Signup)** → Redirects users to personalized experience.  
+- 🤖 **AI Travel Chat** → Friendly, seamless conversation to plan trips.  
+- 📊 **Dashboard** → View past trips, expenditure, and insights.  
+- 🏨 **Features Tab** → Hotel, restaurant, and cab comparison + nearby attractions.  
+- 👤 **Profile Settings** → Update personal details and travel preferences.  
+- 🎨 **Design Theme** → Calm **teal & sky-blue gradient** background to reflect trust, safety, and travel vibes.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tech Stack
+- **Frontend**: React + TypeScript + Vite  
+- **Styling**: Tailwind CSS  
+- **State Management**: Context API / Redux (optional)  
+- **Database**: Firebase / MongoDB (for user profiles & preferences)  
+- **APIs**: Google Maps, OpenWeather, TripAdvisor, Uber/Ola  
+- **Linting**: ESLint + Prettier + Type-checked configs  
 
-```js
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/ai-travel-buddy.git
+cd ai-travel-buddy
+2. Install dependencies
+bash
+Copy code
+npm install
+3. Run the development server
+bash
+Copy code
+npm run dev
+4. Build for production
+bash
+Copy code
+npm run build
+📂 Project Structure
+csharp
+Copy code
+.
+├── src
+│   ├── components     # Reusable components
+│   ├── pages          # Pages (Home, About, Dashboard, Features, Profile)
+│   ├── contexts       # Auth & Preference context
+│   ├── assets         # Images & static files
+│   ├── App.tsx        # Main app component
+│   └── main.tsx       # Entry point
+├── public             # Static files
+├── tsconfig.json
+├── vite.config.ts
+└── package.json
+📏 Linting & Code Quality
+This project uses ESLint with TypeScript-aware rules.
+
+Example config:
+
+js
+Copy code
 export default defineConfig([
   globalIgnores(['dist']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
       tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
       tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
       reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
       reactDom.configs.recommended,
     ],
     languageOptions: {
@@ -62,8 +82,8 @@ export default defineConfig([
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
 ])
-```
+📜 License
+MIT License © 2025 [NovaCore]
